@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayaan Singh Parihar | Void-Ayaan — AI Systems, Cybersecurity & Web Architect</title>
+  <meta name="description" content="Portfolio of Ayaan Singh Parihar (Void-Ayaan). Specializing in Local-First AI Systems (Qwen3 GGUF, llamafile), Cybersecurity, Algorithmic Trading Bots, and High-Performance Web Development.">
+  <meta name="keywords" content="Ayaan Singh Parihar, Void-Ayaan, AI Systems Engineer, Buddy AI, Tradex Bot, Cybersecurity, Full Stack Developer, Jhansi India">
+  <meta name="author" content="Ayaan Singh Parihar">
+
+  <!-- OpenGraph / Social Media Meta Tags -->
+  <meta property="og:title" content="Ayaan Singh Parihar | Void-Ayaan — AI & Web Systems Portfolio">
+  <meta property="og:description" content="Explore local AI desktop systems, algorithmic trading bots, commercial web projects, and cybersecurity engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/avatar.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts: Space Grotesk, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Custom Cyber Cursor -->
+  <div id="cyber-cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cyber-cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Ambient WebGL / Interactive Particles Canvas Background -->
+  <canvas id="neural-canvas" class="neural-bg" aria-hidden="true"></canvas>
+
+  <!-- Cyber Grid and Atmospheric Mesh Overlay -->
+  <div class="cyber-grid-overlay" aria-hidden="true"></div>
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Audio Equalizer / Sound Indicator Toast -->
+  <div id="audio-feedback-indicator" class="audio-toast" aria-live="polite">Audio SFX Activated</div>
+
+  <!-- Navigation Bar -->
+  <header class="cyber-nav-container">
+    <nav class="cyber-nav" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Ayaan Singh Parihar Home">
+        <span class="brand-bracket">[</span>
+        <span class="brand-text">AYAAN<span class="brand-accent">.DEV</span></span>
+        <span class="brand-bracket">]</span>
+        <span class="brand-status-pulse" title="System Online"></span>
+      </a>
+
+      <div class="nav-links-wrapper">
+        <a href="#about" class="nav-link"><span>01.</span> About</a>
+        <a href="#systems" class="nav-link"><span>02.</span> Systems</a>
+        <a href="#buddy-hud" class="nav-link"><span>03.</span> Buddy AI HUD</a>
+        <a href="#skills" class="nav-link"><span>04.</span> Skills</a>
+        <a href="#certificates" class="nav-link"><span>05.</span> Credentials</a>
+        <a href="#timeline" class="nav-link"><span>06.</span> Experience</a>
+        <a href="#contact" class="nav-link"><span>07.</span> Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Audio SFX Toggle Button -->
+        <button id="audio-toggle-btn" class="nav-action-btn audio-btn" title="Toggle UI Sound Effects" aria-label="Toggle Sound Effects">
+          <div class="audio-bars" aria-hidden="true">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+            <span class="bar bar-4"></span>
+          </div>
+          <span class="audio-status-label">SFX</span>
+        </button>
+
+        <!-- Terminal Launcher Button -->
+        <button id="terminal-trigger-btn" class="nav-action-btn terminal-btn" title="Open Interactive Cyber Terminal (Press ~)" aria-label="Open Cyber Terminal">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+          <span class="terminal-key-badge">~</span>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button id="view-resume-btn" class="cyber-btn cyber-btn-primary nav-resume-btn">
+          <span>CV / Resume</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <span class="drawer-brand">[AYAAN<span class="brand-accent">.DEV</span>]</span>
+      <button id="mobile-drawer-close" class="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <div class="mobile-drawer-content">
+      <a href="#about" class="mobile-nav-link"><span>01.</span> About Ayaan</a>
+      <a href="#systems" class="mobile-nav-link"><span>02.</span> Engineered Systems</a>
+      <a href="#buddy-hud" class="mobile-nav-link"><span>03.</span> Buddy AI HUD</a>
+      <a href="#skills" class="mobile-nav-link"><span>04.</span> Technical Skills</a>
+      <a href="#certificates" class="mobile-nav-link"><span>05.</span> Verified Credentials</a>
+      <a href="#timeline" class="mobile-nav-link"><span>06.</span> Experience &amp; Education</a>
+      <a href="#contact" class="mobile-nav-link"><span>07.</span> Transmit Message</a>
+      <div class="mobile-drawer-actions">
+        <button id="mobile-terminal-trigger" class="cyber-btn cyber-btn-outline w-full mb-2">Open Terminal (~)</button>
+        <button id="mobile-resume-trigger" class="cyber-btn cyber-btn-primary w-full">View Resume / CV</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <!-- System Status Pill -->
+          <div class="system-status-badge">
+            <span class="status-indicator"></span>
+            <span class="status-code">SYS://STATUS: ACTIVE</span>
+            <span class="status-divider">|</span>
+            <span class="status-availability">AVAILABLE FOR HIGH-IMPACT ROLES & FREELANCE</span>
+          </div>
+
+          <!-- Hero Name & Title -->
+          <h1 class="hero-name" data-glitch="AYAAN SINGH PARIHAR">
+            <span class="name-sub">Hello World, I'm</span>
+            <span class="name-main">Ayaan Singh <span class="gradient-text">Parihar</span></span>
+          </h1>
+
+          <!-- High-Tech Handle / Alias -->
+          <div class="hero-alias">
+            <span class="terminal-prompt">$</span> <span class="alias-tag">ident://void-ayaan</span>
+            <span class="alias-separator">&bull;</span>
+            <span class="alias-location">Jhansi, India [284003]</span>
+          </div>
+
+          <!-- Dynamic Typewriter Role Subtitle -->
+          <div class="hero-role-wrapper">
+            <span class="role-prefix">&gt; </span>
+            <span id="role-typewriter" class="role-typewriter">AI Systems Architect & Local LLM Engineer</span>
+            <span class="typewriter-cursor">_</span>
+          </div>
+
+          <!-- Hero Bio Pitch -->
+          <p class="hero-description">
+            Building <strong>local-first AI desktop assistants</strong> with quantized GGUF models &amp; tool pipelines, 
+            engineering <strong>algorithmic trading systems</strong>, exploring <strong>cybersecurity &amp; ethical hacking</strong>, 
+            and delivering high-converting <strong>commercial web experiences</strong>.
+          </p>
+
+          <!-- Action CTA Buttons -->
+          <div class="hero-actions">
+            <a href="#buddy-hud" class="cyber-btn cyber-btn-primary">
+              <span class="btn-glow"></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+              <span>Test Buddy AI Live</span>
+            </a>
+            <a href="#systems" class="cyber-btn cyber-btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              <span>Explore Projects</span>
+            </a>
+            <button id="hero-quick-terminal" class="cyber-btn cyber-btn-ghost">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              <span>Launch Terminal</span>
+            </button>
+          </div>
+
+          <!-- Live Telemetry Bar -->
+          <div class="hero-telemetry-bar">
+            <div class="telemetry-item">
+              <span class="telemetry-label">LOCATION</span>
+              <span class="telemetry-value">Jhansi, UP, India</span>
+            </div>
+            <div class="telemetry-separator">/</div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">LOCAL TIME</span>
+              <span id="live-clock" class="telemetry-value">--:--:-- IST</span>
+            </div>
+            <div class="telemetry-separator">/</div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">CS EXCELLENCE</span>
+              <span class="telemetry-value accent-green">92% Top Scorer</span>
+            </div>
+            <div class="telemetry-separator">/</div>
+            <div class="telemetry-item">
+              <span class="telemetry-label">GITHUB</span>
+              <a href="https://github.com/Void-Ayaan" target="_blank" rel="noopener noreferrer" class="telemetry-value link-cyan">@Void-Ayaan ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Holographic Avatar & Orbital HUD Card -->
+        <div class="hero-visual-card" data-tilt>
+          <div class="visual-card-inner">
+            <button id="avatar-toggle-btn" class="avatar-mode-switch" title="Cycle Portrait: Cyber Studio / Filmic Grade / Raw">
+              <span class="switch-dot"></span>
+              <span id="avatar-mode-label">Cyber Studio</span>
+              <span class="switch-hint">⇄ Cycle Vibe</span>
+            </button>
+            <div class="hologram-scanline"></div>
+            <div class="cyber-corner top-left"></div>
+            <div class="cyber-corner top-right"></div>
+            <div class="cyber-corner bottom-left"></div>
+            <div class="cyber-corner bottom-right"></div>
+
+            <div class="avatar-wrapper">
+              <img id="main-avatar-img" src="assets/images/ayaan_cyber_portrait.jpg" alt="Ayaan Singh Parihar - Cyber Studio Portrait" class="hero-avatar-img">
+              <div class="avatar-glow-ring"></div>
+              <div class="avatar-orbit-ring orbit-ring-1"></div>
+              <div class="avatar-orbit-ring orbit-ring-2"></div>
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="orbit-chip chip-qwen" style="--angle: 25deg;">
+              <span class="chip-dot"></span> Qwen3-1.7B GGUF
+            </div>
+            <div class="orbit-chip chip-python" style="--angle: 120deg;">
+              <span class="chip-dot"></span> Python &amp; Java
+            </div>
+            <div class="orbit-chip chip-sec" style="--angle: 215deg;">
+              <span class="chip-dot"></span> Cybersecurity
+            </div>
+            <div class="orbit-chip chip-web" style="--angle: 310deg;">
+              <span class="chip-dot"></span> React &amp; Tailwind
+            </div>
+
+            <!-- Bottom Floating HUD Badge -->
+            <div class="avatar-hud-footer">
+              <div class="hud-stat-pill">
+                <span class="hud-stat-num">10/10</span>
+                <span class="hud-stat-desc">Tool Benchmark</span>
+              </div>
+              <div class="hud-stat-pill">
+                <span class="hud-stat-num">0 API</span>
+                <span class="hud-stat-desc">Local Offline AI</span>
+              </div>
+              <div class="hud-stat-pill">
+                <span class="hud-stat-num">4+</span>
+                <span class="hud-stat-desc">Live Web Apps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 01: ABOUT ME & ENGINEERING ETHOS -->
+    <section id="about" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">// 01. PROFILE_MANIFEST</div>
+        <h2 class="section-title">Architecting Local Intelligence &amp; High-Performance Systems</h2>
+        <p class="section-subtitle">Bridging the gap between edge AI, resilient backend logic, and immersive user interfaces.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Main Story Card -->
+        <div class="cyber-card about-story-card" data-tilt>
+          <div class="card-header-bar">
+            <span class="terminal-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></span>
+            <span class="card-filename">ayaan_parihar_manifesto.json</span>
+          </div>
+          <div class="card-body">
+            <h3 class="story-heading">Independent Builder. Cybersecurity Enthusiast. Systems Tinkerer.</h3>
+            <p>
+              I am an entry-level Web Developer and Systems Creator based in <strong>Jhansi, India</strong>. My passion lies in 
+              understanding how systems operate from the silicon and bit-stream level up to modern, fluid user experiences.
+            </p>
+            <p>
+              Unlike standard developers who rely exclusively on third-party cloud APIs, I spearheaded 
+              <strong>Buddy AI</strong>: a <em>local-first Windows desktop assistant</em> running an offline <strong>Qwen3-1.7B quantized GGUF</strong> 
+              model via llamafile with zero cloud dependencies, complete privacy, deterministic action routers, and SAPI voice synthesis.
+            </p>
+            <p>
+              Simultaneously, my work encompasses <strong>algorithmic financial trading strategies</strong> (scalping engines incorporating EMA, VWAP, RSI, ADX &amp; fractal analysis), 
+              <strong>cybersecurity fundamentals</strong> (ethical hacking &amp; network incident response), and developing 
+              <strong>production commercial websites</strong> for businesses across diverse sectors.
+            </p>
+
+            <div class="about-highlight-chips">
+              <div class="hl-chip"><span class="hl-icon">⚡</span> <strong>Local-First AI</strong>: Offline LLMs, JSON Brain, Zero Cloud Fees</div>
+              <div class="hl-chip"><span class="hl-icon">🛡️</span> <strong>Security Focus</strong>: Ethical Hacking, Incident Response, Network Hardening</div>
+              <div class="hl-chip"><span class="hl-icon">📈</span> <strong>Algo Trading</strong>: Technical indicators, automated execution logging</div>
+              <div class="hl-chip"><span class="hl-icon">🌐</span> <strong>Full-Stack Mastery</strong>: React, Vite, Tailwind, Modern Responsive UI</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metrics & Quick Info Panel -->
+        <div class="about-metrics-col">
+          <div class="cyber-card metric-card" data-tilt>
+            <div class="metric-icon">🏆</div>
+            <div class="metric-number">92%</div>
+            <div class="metric-title">Computer Science Highest Scorer</div>
+            <div class="metric-desc">Reported school-highest Computer Science record at Cathedral College, Jhansi.</div>
+          </div>
+
+          <div class="cyber-card metric-card" data-tilt>
+            <div class="metric-icon">🧠</div>
+            <div class="metric-number">10 / 10</div>
+            <div class="metric-title">Tool Calling Benchmark</div>
+            <div class="metric-desc">100% accuracy on fixed tool-calling validation in Buddy AI local pipeline.</div>
+          </div>
+
+          <div class="cyber-card metric-card" data-tilt>
+            <div class="metric-icon">🚀</div>
+            <div class="metric-number">5+</div>
+            <div class="metric-title">Shipped Projects &amp; Brands</div>
+            <div class="metric-desc">Published client websites (AM Nation, Shooins, Saimahima Stays) and Techmonade.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: FEATURED SYSTEMS & PROJECTS -->
+    <section id="systems" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">// 02. SYSTEM_DEPLOYMENTS</div>
+        <h2 class="section-title">Engineered Projects &amp; Live Deployments</h2>
+        <p class="section-subtitle">Real-world AI architectures, financial trading bots, and client commercial platforms.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-container">
+        <button class="filter-tab active" data-filter="all">All Systems [8]</button>
+        <button class="filter-tab" data-filter="ai">AI &amp; Local LLMs [3]</button>
+        <button class="filter-tab" data-filter="web">Client Websites [3]</button>
+        <button class="filter-tab" data-filter="trading">Trading &amp; Bots [2]</button>
+        <button class="filter-tab" data-filter="automation">Automation &amp; Media [2]</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- PROJECT 1: BUDDY AI SYSTEM -->
+        <article class="project-card cyber-card" data-category="ai" data-tilt>
+          <div class="project-media-wrapper">
+            <img src="assets/images/buddy_ai.jpg" alt="Buddy AI Desktop Assistant Telemetry HUD" class="project-img" loading="lazy">
+            <div class="project-badge status-featured">★ SIGNATURE ARCHITECTURE</div>
+            <div class="project-overlay">
+              <button class="cyber-btn cyber-btn-sm view-details-btn" data-project="buddy-ai">Inspect Architecture</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-cat">LOCAL AI SYSTEM</span>
+              <span class="project-status">v2.4 ACTIVE</span>
+            </div>
+            <h3 class="project-title">Buddy AI System — Local Desktop Assistant</h3>
+            <p class="project-summary">
+              Local-first Windows desktop assistant integrating a quantized <strong>Qwen3-1.7B GGUF</strong> model via local 
+              llamafile server. Eliminates external API dependencies and cloud costs while delivering deterministic 
+              utility routing, JSON memory persistence, Windows SAPI speech output, and a live web HUD.
+            </p>
+            <div class="project-metrics-row">
+              <div class="p-metric"><strong>10/10</strong> Benchmark</div>
+              <div class="p-metric"><strong>24+</strong> Utilities</div>
+              <div class="p-metric"><strong>0</strong> Cloud Calls</div>
+            </div>
+            <div class="tech-tag-cloud">
+              <span class="tech-tag">Qwen3-1.7B GGUF</span>
+              <span class="tech-tag">llamafile</span>
+              <span class="tech-tag">Direct Action Routing</span>
+              <span class="tech-tag">JSON Brain</span>
+              <span class="tech-tag">Windows SAPI</span>
+              <span class="tech-tag">Telemetry HUD</span>
+            </div>
+            <div class="project-actions">
+              <a href="#buddy-hud" class="cyber-btn cyber-btn-primary btn-xs">Interactive Demo ↗</a>
+              <button class="cyber-btn cyber-btn-outline btn-xs view-details-btn" data-project="buddy-ai">Deep Dive</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: TRADEX ALGORITHMIC BOT -->
+        <article class="project-card cyber-card" data-category="trading" data-tilt>
+          <div class="project-media-wrapper">
+            <img src="assets/images/tradex.jpg" alt="Tradex Algorithmic Trading Bot Terminal" class="project-img" loading="lazy">
+            <div class="project-badge status-algo">ALGO ENGINE</div>
+            <div class="project-overlay">
+              <button class="cyber-btn cyber-btn-sm view-details-btn" data-project="tradex">Inspect Architecture</button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-cat">FINANCE &amp; QUANT BOT</span>
+              <span class="project-status">BACKTESTED</span>
+            </div>
+            <h3 class="project-title">Tradex — Algorithmic Scalping Bot</h3>
+            <p class="project-summary">
+              Automated scalping strategy combining <strong>EMA, ADX, VWAP, RSI</strong>, and fractal trigger conditions. 
+              Features automated order handling, execution logging, structured risk controls, and market analysis report generation.
+            </p>
+            <div class="project-metrics-row">
+              <div class="p-metric"><strong>5</strong> Multi-Indicators</div>
+              <div class="p-metric"><strong>Auto</strong> Risk Logs</div>
+              <div class="p-metric"><strong>Scalp</strong> Execution</div>
+            </div>
+            <div class="tech-tag-cloud">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">EMA &amp; VWAP</span>
+              <span class="tech-tag">RSI &amp; ADX</span>
+              <span class="tech-tag">Fractals</span>
+              <span class="tech-tag">Automated Logging</span>
+            </div>
+            <div class="project-actions">
+              <button class="cyber-btn cyber-btn-outline btn-xs view-details-btn" data-project="tradex">Inspect Strategy</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: AM NATION (LIVE CLIENT) -->
+        <article class="project-card cyber-card" data-category="web" data-tilt>
+          <div class="project-media-wrapper client-web-preview">
+            <div class="web-preview-mockup">
+              <div class="mockup-header">
+                <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                <span class="mock-url">amnation.netlify.app</span>
+              </div>
+              <div class="mockup-body client-body-am">
+                <div class="mock-hero-text">AM NATION</div>
+                <div class="mock-hero-sub">Commercial Enterprise Platform</div>
+                <div class="mock-cta">EXPLORE SERVICES ↗</div>
+              </div>
+            </div>
+            <div class="project-badge status-live">LIVE PRODUCTION</div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-cat">COMMERCIAL CLIENT SITE</span>
+              <span class="project-status">PUBLISHED</span>
+            </div>
+            <h3 class="project-title">AM Nation — Business Platform</h3>
+            <p class="project-summary">
+              Built and published commercial business website focused on high-conversion layout, 
+              crisp visual presentation, responsive mobile design, and fast load speeds.
+            </p>
+            <div class="tech-tag-cloud">
+              <span class="tech-tag">Frontend Architecture</span>
+              <span class="tech-tag">Responsive UI</span>
+              <span class="tech-tag">Netlify Deployment</span>
+              <span class="tech-tag">Performance SEO</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://amnation.netlify.app/" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-primary btn-xs">Live Site ↗</a>
+              <button class="cyber-btn cyber-btn-outline btn-xs view-details-btn" data-project="amnation">Case Study</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4: SHOOINS (B2B CLIENT) -->
+        <article class="project-card cyber-card" data-category="web" data-tilt>
+          <div class="project-media-wrapper client-web-preview">
+            <div class="web-preview-mockup">
+              <div class="mockup-header">
+                <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                <span class="mock-url">shooins.netlify.app</span>
+              </div>
+              <div class="mockup-body client-body-shooins">
+                <div class="mock-hero-text">SHOOINS</div>
+                <div class="mock-hero-sub">Wholesale B2B Hair Accessories</div>
+                <div class="mock-cta">WHOLESALE CATALOG ↗</div>
+              </div>
+            </div>
+            <div class="project-badge status-live">B2B SUPPLIER</div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-cat">B2B WHOLESALE PLATFORM</span>
+              <span class="project-status">PUBLISHED</span>
+            </div>
+            <h3 class="project-title">Shooins — B2B Supplier Portal</h3>
+            <p class="project-summary">
+              B2B supplier website for a wholesale hair-accessories supplier. Engineered catalog 
+              presentation, brand consistency, structured supplier credentials, and customer inquiry pathways.
+            </p>
+            <div class="tech-tag-cloud">
+              <span class="tech-tag">B2B Architecture</span>
+              <span class="tech-tag">Product Catalog</span>
+              <span class="tech-tag">Lead Inquiries</span>
+              <span class="tech-tag">Netlify CDN</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://shooins.netlify.app/" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-primary btn-xs">Live Site ↗</a>
+              <button class="cyber-btn cyber-btn-outline btn-xs view-details-btn" data-project="shooins">Case Study</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 5: SAIMAHIMA STAYS (HOSPITALITY CLIENT) -->
+        <article class="project-card cyber-card" data-category="web" data-tilt>
+          <div class="project-media-wrapper client-web-preview">
+            <div class="web-preview-mockup">
+              <div class="mockup-header">
+                <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                <span class="mock-url">saimahimastays.site</span>
+              </div>
+              <div class="mockup-body client-body-stays">
+                <div class="mock-hero-text">SAIMAHIMA STAYS</div>
+                <div class="mock-hero-sub">Premium Homestay &amp; Hospitality</div>
+                <div class="mock-cta">BOOK RESERVATION ↗</div>
+              </div>
+            </div>
+            <div class="project-badge status-live">CUSTOM DOMAIN</div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-cat">HOSPITALITY &amp; BOOKING</span>
+              <span class="project-status">LIVE DOMAIN</span>
+            </div>
+            <h3 class="project-title">Saimahima Stays — Hospitality Web Experience</h3>
+            <p class="project-summary">
+              Created and deployed a full hospitality showcase website with custom domain integration, 
+              room amenities walkthrough, gallery, and guest reservation contact funnels.
+            </p>
+            <div class="tech-tag-cloud">
+              <span class="tech-tag">Hospitality UI</span>
+              <span class="tech-tag">Custom Domain</span>
+              <span class="tech-tag">Visual Storytelling</span>
+              <span class="tech-tag">Booking Flow</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://saimahimastays.site/" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-primary btn-xs">Live Site ↗</a>
+              <button class="cyber-btn cyber-btn-outline btn-xs view-details-btn" data-project="saimahima">Case Study</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 6: TECHMONADE BRAND & AUTOMATION -->
+        <article class="project-card cyber-card" data-category="automation" data-tilt>
+          <div class="project-media-wrapper client-web-preview">
+            <div class="web-preview-mockup">
+              <div class="mockup-header">
+                <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+                <span class="mock-url">instagram.com/techmonade</span>
+              </div>
+              <div class="mockup-body client-body-techmonade">
+                <div class="mock-hero-text">TECHMONADE</div>
+                <div class="mock-hero-sub">Desk Setups &amp; Tech Peripheral Media</div>
+                <div class="mock-cta">VIEW FEED ↗</div>
+              </div>
+            </div>
+            <div class="project-badge status-media">MEDIA BRAND</div>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-cat">TECH CONTENT &amp; MEDIA</span>
+              <span class="project-status">ACTIVE BRAND</span>
+            </div>
+            <h3 class="project-title">Techmonade &amp; Auto-Posting Workflow</h3>
+            <p class="project-summary">
+              Technology content brand centered on aesthetic desk setups and tech peripherals. 
+              Integrated with an automated Python + Playwright headless posting workflow for video sequencing, captions, and publishing.
+            </p>
+            <div class="tech-tag-cloud">
+              <span class="tech-tag">Python &amp; Playwright</span>
+              <span class="tech-tag">Video Sequencing</span>
+              <span class="tech-tag">Beat Sync</span>
+              <span class="tech-tag">Automation Pipeline</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://www.instagram.com/techmonade/" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-primary btn-xs">Instagram Feed ↗</a>
+              <button class="cyber-btn cyber-btn-outline btn-xs view-details-btn" data-project="techmonade">Workflow Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 7: PASSIVE BUDDY / SLEEP2EARNBOT -->
+        <article class="project-card cyber-card" data-category="trading" data-tilt>
+          <div class="project-content full-card">
+            <div class="project-meta">
+              <span class="project-cat">TELEGRAM BOT &amp; GIG AUTOMATION</span>
+              <span class="project-status">PROTOTYPE</span>
+            </div>
+            <h3 class="project-title">Passive Buddy / Sleep2EarnBot</h3>
+            <p class="project-summary">
+              Automated AI-powered digital service delivery bot built on Telegram. Orchestrates automated 
+              workflows across generative media tools (Canva, Runway, ChatGPT) to service digital gig requests autonomously.
+            </p>
+            <div class="tech-tag-cloud">
+              <span class="tech-tag">Telegram Bot API</span>
+              <span class="tech-tag">Python Async</span>
+              <span class="tech-tag">Service Automation</span>
+              <span class="tech-tag">JSON Store</span>
+            </div>
+            <div class="project-actions">
+              <button class="cyber-btn cyber-btn-outline btn-xs view-details-btn" data-project="passive-buddy">Architecture Overview</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 8: ABSORPTION ENGINE & OFFLINE BRAIN -->
+        <article class="project-card cyber-card" data-category="ai" data-tilt>
+          <div class="project-content full-card">
+            <div class="project-meta">
+              <span class="project-cat">KNOWLEDGE INGESTION ENGINE</span>
+              <span class="project-status">RESEARCH &amp; CODE</span>
+            </div>
+            <h3 class="project-title">Absorption Engine &amp; Offline JSON Brain</h3>
+            <p class="project-summary">
+              Custom structured knowledge ingestion engine storing session states, learned facts, and contextual 
+              hierarchies without cloud databases. Documented clean ingestion pipelines enabling local LLM factual retrieval.
+            </p>
+            <div class="tech-tag-cloud">
+              <span class="tech-tag">Structured JSON</span>
+              <span class="tech-tag">Offline Ingestion</span>
+              <span class="tech-tag">Factual Retrieval</span>
+              <span class="tech-tag">Technical Docs</span>
+            </div>
+            <div class="project-actions">
+              <button class="cyber-btn cyber-btn-outline btn-xs view-details-btn" data-project="absorption-engine">Inspect Specification</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 03: LIVE BUDDY AI HUD CONSOLE -->
+    <section id="buddy-hud" class="section-container buddy-hud-section">
+      <div class="section-header">
+        <div class="section-tag">// 03. INTERACTIVE_SIMULATION</div>
+        <h2 class="section-title">Buddy AI System — Live Telemetry &amp; Request HUD</h2>
+        <p class="section-subtitle">Interact directly with Ayaan's signature local AI architecture. Test queries and observe real-time telemetry routing.</p>
+      </div>
+
+      <div class="buddy-hud-console cyber-card">
+        <!-- Console Top Titlebar -->
+        <div class="hud-titlebar">
+          <div class="hud-titlebar-left">
+            <span class="hud-status-led pulsing-led"></span>
+            <span class="hud-brand-title">BUDDY AI v2.4</span>
+            <span class="hud-arch-tag">LOCAL_QWEN3_1.7B_GGUF // OFFLINE_LLAMAFILE</span>
+          </div>
+          <div class="hud-titlebar-right">
+            <span class="hud-system-time" id="hud-clock">00:00:00</span>
+            <span class="hud-telemetry-badge">0ms CLOUD_LATENCY</span>
+          </div>
+        </div>
+
+        <!-- Telemetry Gauges Row -->
+        <div class="hud-telemetry-grid">
+          <!-- CPU Telemetry -->
+          <div class="hud-metric-box">
+            <div class="metric-box-title">CPU UTILIZATION</div>
+            <div class="metric-gauge-wrapper">
+              <div class="metric-circle-gauge" style="--val: 38;">
+                <span class="gauge-center-text" id="cpu-percent">38%</span>
+              </div>
+              <div class="metric-details">
+                <div class="gauge-detail-line">CORE: <span>i7 / 4.8GHz</span></div>
+                <div class="gauge-detail-line">ROUTER: <span>Deterministic</span></div>
+                <div class="gauge-detail-line">STATE: <span class="text-green">Optimized</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RAM Telemetry -->
+          <div class="hud-metric-box">
+            <div class="metric-box-title">RAM ALLOCATION (GGUF)</div>
+            <div class="metric-gauge-wrapper">
+              <div class="metric-circle-gauge purple-gauge" style="--val: 64;">
+                <span class="gauge-center-text" id="ram-percent">64%</span>
+              </div>
+              <div class="metric-details">
+                <div class="gauge-detail-line">MODEL: <span>Qwen3-1.7B</span></div>
+                <div class="gauge-detail-line">QUANT: <span>GGUF 4_K_M</span></div>
+                <div class="gauge-detail-line">VRAM/RAM: <span class="text-purple">1.4 GB</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Request Pipeline Status -->
+          <div class="hud-metric-box pipeline-box">
+            <div class="metric-box-title">PIPELINE ROUTER</div>
+            <div class="hud-pipeline-steps">
+              <div class="step-node active"><span class="step-icon">1</span> Prompt In</div>
+              <div class="step-arrow">→</div>
+              <div class="step-node active"><span class="step-icon">2</span> Direct Router</div>
+              <div class="step-arrow">→</div>
+              <div class="step-node active"><span class="step-icon">3</span> Tool Registry</div>
+              <div class="step-arrow">→</div>
+              <div class="step-node active"><span class="step-icon">4</span> JSON Brain</div>
+              <div class="step-arrow">→</div>
+              <div class="step-node active"><span class="step-icon">5</span> SAPI Voice</div>
+            </div>
+            <div class="pipeline-status-text">
+              Status: <span class="text-green">READY FOR QUERY DISPATCH</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Chat Terminal -->
+        <div class="hud-chat-container">
+          <div class="chat-logs-viewport" id="hud-chat-logs" role="log" aria-live="polite">
+            <div class="chat-msg bot-msg">
+              <div class="msg-sender"><span class="bot-badge">BUDDY AI</span> <span class="msg-time">System Ready</span></div>
+              <div class="msg-bubble">
+                Greetings. I am <strong>Buddy AI</strong>, Ayaan Singh Parihar's local desktop assistant. 
+                I operate completely offline on Windows using a quantized <strong>Qwen3-1.7B GGUF</strong> model with custom tool-calling, 
+                JSON memory stores, and SAPI voice synthesis.
+                <br><br>
+                Click one of the prompt chips below or type a query to test my knowledge base:
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Prompts -->
+          <div class="hud-quick-prompts">
+            <button class="quick-chip" data-prompt="Who is Ayaan Singh Parihar and what are his top strengths?">Who is Ayaan?</button>
+            <button class="quick-chip" data-prompt="Explain the architecture of Buddy AI System and tool calling.">Buddy AI Architecture</button>
+            <button class="quick-chip" data-prompt="Tell me about Ayaan's live client web development projects.">Client Websites</button>
+            <button class="quick-chip" data-prompt="How does the Tradex algorithmic scalper work?">Tradex Algorithmic Bot</button>
+            <button class="quick-chip" data-prompt="What are Ayaan's verified certifications and academic records?">Credentials &amp; CS 92%</button>
+            <button class="quick-chip" data-prompt="How can I contact or hire Ayaan for projects?">Contact &amp; Hire</button>
+          </div>
+
+          <!-- Input Dispatch Bar -->
+          <form id="hud-input-form" class="hud-input-bar">
+            <span class="hud-prompt-symbol">&gt;</span>
+            <input type="text" id="hud-user-input" class="hud-text-input" placeholder="Query Buddy AI (e.g. 'Show me Ayaan's tech stack' or 'Explain Tradex')..." autocomplete="off">
+            <button type="submit" class="cyber-btn cyber-btn-primary hud-send-btn">
+              <span>Execute</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="send-icon"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: TECHNICAL SKILLS & COMPETENCY MATRIX -->
+    <section id="skills" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">// 04. COMPETENCY_MATRIX</div>
+        <h2 class="section-title">Technical Capabilities &amp; System Stack</h2>
+        <p class="section-subtitle">Deep dive into my engineering toolset across AI systems, cybersecurity, web applications, and core languages.</p>
+      </div>
+
+      <div class="skills-categories-grid">
+
+        <!-- CATEGORY 1: AI & LOCAL SYSTEMS -->
+        <div class="skill-category-card cyber-card" data-tilt>
+          <div class="skill-cat-header">
+            <div class="cat-icon ai-icon">🧠</div>
+            <div class="cat-info">
+              <h3>AI Systems &amp; Local LLMs</h3>
+              <span class="cat-tagline">Offline Edge Intelligence &amp; Prompt Pipelines</span>
+            </div>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Local LLMs (Qwen3-1.7B, GGUF, llamafile)</span>
+                <span class="skill-level">95%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 95%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Tool-Calling &amp; Deterministic Routing</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">JSON Brain Stores &amp; Offline Retrieval</span>
+                <span class="skill-level">92%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 92%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Windows SAPI Speech &amp; Voice Pipelines</span>
+                <span class="skill-level">85%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 85%;"></div></div>
+            </div>
+          </div>
+          <div class="tech-pills-row">
+            <span class="tech-pill">GGUF</span>
+            <span class="tech-pill">llamafile</span>
+            <span class="tech-pill">Qwen3</span>
+            <span class="tech-pill">Structured JSON</span>
+            <span class="tech-pill">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY 2: CYBERSECURITY & NETWORKING -->
+        <div class="skill-category-card cyber-card" data-tilt>
+          <div class="skill-cat-header">
+            <div class="cat-icon sec-icon">🛡️</div>
+            <div class="cat-info">
+              <h3>Cybersecurity &amp; Infrastructure</h3>
+              <span class="cat-tagline">Defensive Principles &amp; Vulnerability Awareness</span>
+            </div>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Ethical Hacking Fundamentals</span>
+                <span class="skill-level">82%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 82%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Incident Response &amp; Security Concepts</span>
+                <span class="skill-level">80%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 80%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Network Protocols &amp; Traffic Basics</span>
+                <span class="skill-level">85%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 85%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Bash Scripting &amp; Linux Environments</span>
+                <span class="skill-level">84%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 84%;"></div></div>
+            </div>
+          </div>
+          <div class="tech-pills-row">
+            <span class="tech-pill">Linux</span>
+            <span class="tech-pill">Bash</span>
+            <span class="tech-pill">Security Audits</span>
+            <span class="tech-pill">Network Security</span>
+            <span class="tech-pill">OWASP Basics</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY 3: FRONTEND & WEB ARCHITECTURE -->
+        <div class="skill-category-card cyber-card" data-tilt>
+          <div class="skill-cat-header">
+            <div class="cat-icon web-icon">⚡</div>
+            <div class="cat-info">
+              <h3>Frontend &amp; Web Development</h3>
+              <span class="cat-tagline">Modern Interfaces, Fluid UX &amp; Design Systems</span>
+            </div>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">HTML5 &amp; Modern Semantic Markup</span>
+                <span class="skill-level">96%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 96%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Vanilla CSS, Glassmorphism &amp; Responsive Layouts</span>
+                <span class="skill-level">94%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 94%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Modern JavaScript (ES6+, DOM, Web Audio, Canvas)</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">React, Vite, Tailwind CSS &amp; shadcn/ui</span>
+                <span class="skill-level">88%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 88%;"></div></div>
+            </div>
+          </div>
+          <div class="tech-pills-row">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Vite</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Netlify/Vercel</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY 4: PROGRAMMING LANGUAGES & SYSTEMS -->
+        <div class="skill-category-card cyber-card" data-tilt>
+          <div class="skill-cat-header">
+            <div class="cat-icon prog-icon">💻</div>
+            <div class="cat-info">
+              <h3>Core Programming &amp; Systems</h3>
+              <span class="cat-tagline">Data Structures, Algorithms &amp; Automation</span>
+            </div>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Java (OOP, DSA, Arrays, Inheritance, Polymorphism)</span>
+                <span class="skill-level">92%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 92%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Python Scripting &amp; Browser Automation (Playwright)</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Git, GitHub &amp; Version Control</span>
+                <span class="skill-level">88%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 88%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">REST APIs &amp; Docker Fundamentals</span>
+                <span class="skill-level">82%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 82%;"></div></div>
+            </div>
+          </div>
+          <div class="tech-pills-row">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Playwright</span>
+            <span class="tech-pill">Git</span>
+            <span class="tech-pill">Docker basics</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY 5: ALGORITHMIC TRADING & FINANCE -->
+        <div class="skill-category-card cyber-card" data-tilt>
+          <div class="skill-cat-header">
+            <div class="cat-icon quant-icon">📈</div>
+            <div class="cat-info">
+              <h3>Algorithmic Trading &amp; Quant Logic</h3>
+              <span class="cat-tagline">Mathematical Indicators &amp; Automated Execution</span>
+            </div>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Technical Indicators (EMA, VWAP, RSI, ADX, MACD)</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Scalping Strategy Logic &amp; Fractals</span>
+                <span class="skill-level">88%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 88%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Order Handling &amp; Risk Protection Rules</span>
+                <span class="skill-level">85%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 85%;"></div></div>
+            </div>
+          </div>
+          <div class="tech-pills-row">
+            <span class="tech-pill">Scalping</span>
+            <span class="tech-pill">VWAP &amp; EMA</span>
+            <span class="tech-pill">Risk Controls</span>
+            <span class="tech-pill">Backtesting</span>
+          </div>
+        </div>
+
+        <!-- CATEGORY 6: AUTOMATION & MEDIA PRODUCTION -->
+        <div class="skill-category-card cyber-card" data-tilt>
+          <div class="skill-cat-header">
+            <div class="cat-icon media-icon">🎬</div>
+            <div class="cat-info">
+              <h3>Automation &amp; Content Engineering</h3>
+              <span class="cat-tagline">Workflow Orchestration &amp; Visual Brand Direction</span>
+            </div>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Short-Form Video Sequencing &amp; Beat Sync</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Playwright Browser Automation Scripts</span>
+                <span class="skill-level">88%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 88%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row">
+                <span class="skill-label">Canva, Visual Hierarchy &amp; Content Strategy</span>
+                <span class="skill-level">92%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="--level: 92%;"></div></div>
+            </div>
+          </div>
+          <div class="tech-pills-row">
+            <span class="tech-pill">Playwright</span>
+            <span class="tech-pill">Clip Sequencing</span>
+            <span class="tech-pill">Canva</span>
+            <span class="tech-pill">Brand Identity</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 05: VERIFIED CREDENTIALS & CERTIFICATES -->
+    <section id="certificates" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">// 05. VERIFIED_CREDENTIALS</div>
+        <h2 class="section-title">Certifications &amp; Academic Honors</h2>
+        <p class="section-subtitle">Authenticated achievements in Artificial Intelligence, Python Programming, Full Stack Development, and Computer Science.</p>
+      </div>
+
+      <div class="certificates-grid">
+
+        <!-- CERTIFICATE 1: be10x AI Tools -->
+        <div class="cert-card cyber-card" data-tilt>
+          <div class="cert-hologram-strip"></div>
+          <div class="cert-header">
+            <div class="cert-issuer-badge be10x-badge">be10x</div>
+            <div class="cert-verified-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="cert-check"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>VERIFIED</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">AI Tools &amp; ChatGPT Workshop</h3>
+            <p class="cert-issuer">Issued by be10x (Aditya Goenka &amp; Aditya Kachave)</p>
+            <div class="cert-date">Issued: April 13th, 2025</div>
+            <ul class="cert-competencies">
+              <li>Create presentations using AI in under 5 minutes</li>
+              <li>Analyse complex data sets using AI in under 30 minutes</li>
+              <li>Code, debug, and optimize systems using AI in under 10 minutes</li>
+            </ul>
+          </div>
+          <div class="cert-footer">
+            <button class="cyber-btn cyber-btn-outline btn-xs view-cert-btn" data-cert="be10x">Inspect Certificate</button>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 2: Coursera & UST Python -->
+        <div class="cert-card cyber-card" data-tilt>
+          <div class="cert-hologram-strip"></div>
+          <div class="cert-header">
+            <div class="cert-issuer-badge ust-badge">UST &bull; COURSERA</div>
+            <div class="cert-verified-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="cert-check"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>VERIFIED ID</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Create Your First Python Program From UST</h3>
+            <p class="cert-issuer">Authorized by Coursera &amp; Offered through UST</p>
+            <div class="cert-date">Completed: November 8th, 2025</div>
+            <div class="cert-verify-id">Verification ID: <code>PGV6TNVKMS4R</code></div>
+            <ul class="cert-competencies">
+              <li>Python core syntax, control flow, functions &amp; data structures</li>
+              <li>Hands-on programming logic under Machine Learning &amp; Data Science Instructor Amit Yadav</li>
+            </ul>
+          </div>
+          <div class="cert-footer">
+            <a href="https://coursera.org/verify/PGV6TNVKMS4R" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-primary btn-xs">Verify on Coursera ↗</a>
+            <button class="cyber-btn cyber-btn-outline btn-xs view-cert-btn" data-cert="coursera">View Badge</button>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 3: Outskill GenAI Mastermind -->
+        <div class="cert-card cyber-card" data-tilt>
+          <div class="cert-hologram-strip"></div>
+          <div class="cert-header">
+            <div class="cert-issuer-badge outskill-badge">OUTSKILL</div>
+            <div class="cert-verified-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="cert-check"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>COMPLETED</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Generative AI Mastermind</h3>
+            <p class="cert-issuer">Issued by Outskill</p>
+            <div class="cert-date">Credential of Mastery</div>
+            <ul class="cert-competencies">
+              <li>Generative model architectures &amp; prompt chaining</li>
+              <li>Workflow automation and autonomous agent reasoning</li>
+            </ul>
+          </div>
+          <div class="cert-footer">
+            <button class="cyber-btn cyber-btn-outline btn-xs view-cert-btn" data-cert="outskill">View Details</button>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 4: WsCube Tech Full Stack -->
+        <div class="cert-card cyber-card" data-tilt>
+          <div class="cert-hologram-strip"></div>
+          <div class="cert-header">
+            <div class="cert-issuer-badge wscube-badge">WsCube Tech</div>
+            <div class="cert-verified-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="cert-check"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>2026 EDITION</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">How To Become A Top Full Stack Developer In 2026</h3>
+            <p class="cert-issuer">WsCube Tech &bull; Certificate of Participation</p>
+            <div class="cert-date">Issued: January 2026</div>
+            <ul class="cert-competencies">
+              <li>Next-generation modern full stack development pipelines</li>
+              <li>Modern API architecture, UI engineering &amp; cloud deployment</li>
+            </ul>
+          </div>
+          <div class="cert-footer">
+            <button class="cyber-btn cyber-btn-outline btn-xs view-cert-btn" data-cert="wscube">View Details</button>
+          </div>
+        </div>
+
+        <!-- ACADEMIC HONOR: CS 92% TOP SCORER -->
+        <div class="cert-card cyber-card academic-honor-card" data-tilt>
+          <div class="cert-hologram-strip gold-strip"></div>
+          <div class="cert-header">
+            <div class="cert-issuer-badge school-badge">CATHEDRAL COLLEGE</div>
+            <div class="cert-verified-pill gold-pill">
+              <span>★ SCHOOL RECORD</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">92% in 10th Computer Science</h3>
+            <p class="cert-issuer">Cathedral College, Jhansi &bull; ISC Board</p>
+            <div class="cert-date">Class X Board Examination Record</div>
+            <ul class="cert-competencies">
+              <li>Reported School-Highest Computer Science score for the graduating year</li>
+              <li>Rigorous mastery of Java, Object-Oriented Programming, and algorithmic logic</li>
+            </ul>
+          </div>
+          <div class="cert-footer">
+            <span class="academic-badge-text">Gold Academic Distinction</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 06: EXPERIENCE & EDUCATION TIMELINE -->
+    <section id="timeline" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">// 06. CHRONOLOGY</div>
+        <h2 class="section-title">Experience &amp; Academic Timeline</h2>
+        <p class="section-subtitle">Milestones spanning client delivery, institutional education, and systems research.</p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- TIMELINE ITEM 1 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content cyber-card" data-tilt>
+            <div class="timeline-date">CURRENT / ONGOING</div>
+            <h3 class="timeline-role">Independent AI Systems Researcher &amp; Freelance Developer</h3>
+            <div class="timeline-company">Self-Employed &bull; Remote</div>
+            <p class="timeline-desc">
+              Designing local-first AI assistants (Buddy AI v2.4 with Qwen3-1.7B GGUF), algorithmic trading scalpers (Tradex), 
+              and commercial client websites (AM Nation, Shooins, Saimahima Stays). Managing end-to-end project lifecycles from architecture to deployment.
+            </p>
+          </div>
+        </div>
+
+        <!-- TIMELINE ITEM 2 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content cyber-card" data-tilt>
+            <div class="timeline-date">MARCH 2026 – PRESENT</div>
+            <h3 class="timeline-role">Data Entry Intern</h3>
+            <div class="timeline-company">Individual Home &bull; Remote</div>
+            <p class="timeline-desc">
+              Reviewed source records to verify data accuracy before ingestion into database systems. 
+              Maintained strict record consistency, corrected formatting anomalies, eliminated duplicate entries, and organized digital structures for rapid retrieval.
+            </p>
+          </div>
+        </div>
+
+        <!-- TIMELINE ITEM 3 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content cyber-card" data-tilt>
+            <div class="timeline-date">CLASS XII (2026)</div>
+            <h3 class="timeline-role">Indian School Certificate (ISC) — Class XII Science</h3>
+            <div class="timeline-company">Cathedral College, Jhansi</div>
+            <p class="timeline-desc">
+              Subjects: Physics, Chemistry, Mathematics, Computer Science, Arts, and English. 
+              Deepening analytical foundations in discrete math, computation, and scientific problem-solving.
+            </p>
+          </div>
+        </div>
+
+        <!-- TIMELINE ITEM 4 -->
+        <div class="timeline-item">
+          <div class="timeline-node gold-node"></div>
+          <div class="timeline-content cyber-card" data-tilt>
+            <div class="timeline-date">CLASS X (BOARD RECORD)</div>
+            <h3 class="timeline-role">Class X Computer Science — 92% Top Scorer</h3>
+            <div class="timeline-company">Cathedral College, Jhansi</div>
+            <p class="timeline-desc">
+              Achieved 92% in Computer Science (Java OOP, algorithms, sorting, and structural searching) — 
+              recognized as the school-highest Computer Science score for the graduating year.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 07: CONTACT & TRANSMISSION CENTER -->
+    <section id="contact" class="section-container">
+      <div class="section-header">
+        <div class="section-tag">// 07. TRANSMISSION_CHANNEL</div>
+        <h2 class="section-title">Establish Communications</h2>
+        <p class="section-subtitle">Open for developer opportunities, cybersecurity internships, freelance web projects, and AI collaborations.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Coordinates Card -->
+        <div class="cyber-card contact-info-card" data-tilt>
+          <div class="card-header-bar">
+            <span class="terminal-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></span>
+            <span class="card-filename">comm_endpoints.sh</span>
+          </div>
+          <div class="card-body">
+            <h3 class="contact-info-heading">Direct Transmissions</h3>
+            <p>Feel free to reach out via direct email, phone call, or connect on GitHub and LinkedIn.</p>
+
+            <div class="contact-methods-list">
+              <!-- Email Item with 1-Click Copy -->
+              <div class="contact-item">
+                <div class="contact-icon-box">📧</div>
+                <div class="contact-details">
+                  <span class="contact-item-label">PRIMARY EMAIL</span>
+                  <a href="mailto:anshparihar345@gmail.com" class="contact-item-value">anshparihar345@gmail.com</a>
+                </div>
+                <button class="copy-btn cyber-btn cyber-btn-ghost" data-copy="anshparihar345@gmail.com" title="Copy Email">
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Phone Item with 1-Click Copy -->
+              <div class="contact-item">
+                <div class="contact-icon-box">📱</div>
+                <div class="contact-details">
+                  <span class="contact-item-label">PHONE / WHATSAPP</span>
+                  <a href="tel:+919236447300" class="contact-item-value">+91 9236447300</a>
+                </div>
+                <button class="copy-btn cyber-btn cyber-btn-ghost" data-copy="+919236447300" title="Copy Phone">
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Location Item -->
+              <div class="contact-item">
+                <div class="contact-icon-box">📍</div>
+                <div class="contact-details">
+                  <span class="contact-item-label">LOCATION &amp; POSTAL</span>
+                  <span class="contact-item-value">Jhansi, Uttar Pradesh, India 284003</span>
+                </div>
+              </div>
+
+              <!-- Languages Item -->
+              <div class="contact-item">
+                <div class="contact-icon-box">🌐</div>
+                <div class="contact-details">
+                  <span class="contact-item-label">LANGUAGES</span>
+                  <span class="contact-item-value">English &bull; Hindi (Fluent)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials-row">
+              <a href="https://github.com/Void-Ayaan" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub Void-Ayaan">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ansh-parihar-23b681387" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/techmonade/" target="_blank" rel="noopener noreferrer" class="social-pill" title="Instagram Techmonade">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <span>Techmonade</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transmission Form -->
+        <div class="cyber-card contact-form-card" data-tilt>
+          <div class="card-header-bar">
+            <span class="terminal-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></span>
+            <span class="card-filename">transmit_message.dispatch</span>
+          </div>
+          <div class="card-body">
+            <form id="contact-transmission-form" class="transmission-form">
+              <div class="form-group">
+                <label for="sender-name" class="form-label">SENDER IDENTITY // NAME</label>
+                <input type="text" id="sender-name" class="form-input" placeholder="e.g. Elena Rostova or Hiring Team" required>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-email" class="form-label">RETURN ENCRYPTION // EMAIL ADDRESS</label>
+                <input type="email" id="sender-email" class="form-input" placeholder="e.g. elena@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-subject" class="form-label">TRANSMISSION TOPIC // SUBJECT</label>
+                <select id="sender-subject" class="form-select" required>
+                  <option value="AI Systems & Local LLMs">AI Systems &amp; Local LLM Exploration</option>
+                  <option value="Commercial Web Development">Commercial Website Project / Freelance</option>
+                  <option value="Cybersecurity Role">Cybersecurity / Tech Opportunity</option>
+                  <option value="Trading Bot Consultation">Algorithmic Trading Bot Inquiry</option>
+                  <option value="General Collaboration">General Hello / Tech Collaboration</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-message" class="form-label">PAYLOAD // MESSAGE DETAILS</label>
+                <textarea id="sender-message" class="form-textarea" rows="4" placeholder="Detail your project scope, timeline, or inquiry..." required></textarea>
+              </div>
+
+              <button type="submit" class="cyber-btn cyber-btn-primary w-full transmit-submit-btn">
+                <span class="btn-glow"></span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <span>Dispatch Transmission to Ayaan</span>
+              </button>
+
+              <div id="form-status-alert" class="form-status-alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <div class="footer-brand">[AYAAN SINGH PARIHAR]</div>
+        <p class="footer-tagline">Architecting Local AI Systems, Cybersecurity &amp; High-Impact Web Solutions.</p>
+        <div class="footer-geo">COORDINATES: 25.4484° N, 78.5685° E &bull; Jhansi, India 284003</div>
+      </div>
+      <div class="footer-links-col">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="https://github.com/Void-Ayaan" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/ansh-parihar-23b681387" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/techmonade/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer-bottom-line">
+        <span>&copy; 2026 Ayaan Singh Parihar (Void-Ayaan). All Rights Reserved.</span>
+        <span>Built with Precision Vanilla CSS &amp; Pure JavaScript.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODALS & OVERLAYS ================= -->
+
+  <!-- 1. FULL INTERACTIVE HACKER TERMINAL OVERLAY (Hotkey: ~) -->
+  <div id="terminal-modal" class="terminal-modal-overlay" aria-hidden="true" role="dialog" aria-label="Interactive Cyber Terminal">
+    <div class="terminal-window">
+      <div class="terminal-window-header">
+        <div class="terminal-window-dots">
+          <button id="terminal-close-dot" class="dot red" title="Close Terminal"></button>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="terminal-window-title">bash — void-ayaan@system-node: ~</div>
+        <div class="terminal-window-actions">
+          <button id="terminal-clear-btn" class="term-tool-btn" title="Clear Screen">clear</button>
+          <button id="terminal-close-btn" class="term-tool-btn" title="Close [Esc]">✕</button>
+        </div>
+      </div>
+      <div class="terminal-window-body" id="term-output" role="log">
+        <div class="term-line banner-line">
+========================================================================
+   ___ _   _ ___   _   _  _   ___ ___ _  _  ___ _  _   ___ ___ ___ 
+  /   \ \ / / _ \ /_\ / \| \ | _ \_ _| \| |/ __| || | | _ \ __| _ \
+  | - |\ V / /_\ / _ \ _ \ .`|  _/| || .` | (_ | __ | |  _/ _||   /
+  |_|_| |_/_/ \_/_/ \_|_|_|\_|_| |___|_|\_|\___|_||_| |_| |___|_|_\
+========================================================================
+Type <span class="term-highlight">'help'</span> to view available system commands.
+Type <span class="term-highlight">'matrix'</span> to initiate the matrix code rain.
+Type <span class="term-highlight">'buddy'</span> to interface with the local AI brain.
+        </div>
+      </div>
+      <div class="terminal-input-row">
+        <span class="term-ps1"><span class="ps1-user">void-ayaan</span>@<span class="ps1-host">hub</span>:<span class="ps1-path">~</span>$ </span>
+        <input type="text" id="term-input" class="term-cli-input" autofocus spellcheck="false" autocomplete="off">
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CERTIFICATE LIGHTBOX / INSPECTION MODAL -->
+  <div id="cert-modal" class="cert-modal-overlay" aria-hidden="true" role="dialog" aria-label="Certificate Viewer">
+    <div class="cert-modal-dialog cyber-card">
+      <button id="cert-modal-close" class="modal-close-btn" aria-label="Close Certificate">&times;</button>
+      <div id="cert-modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. PROJECT ARCHITECTURE DEEP DIVE MODAL -->
+  <div id="project-modal" class="project-modal-overlay" aria-hidden="true" role="dialog" aria-label="Project Deep Dive">
+    <div class="project-modal-dialog cyber-card">
+      <button id="project-modal-close" class="modal-close-btn" aria-label="Close Project Modal">&times;</button>
+      <div id="project-modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. PRINT-READY & FULL RESUME VIEWER MODAL -->
+  <div id="resume-modal" class="resume-modal-overlay" aria-hidden="true" role="dialog" aria-label="Executive Resume">
+    <div class="resume-modal-dialog">
+      <div class="resume-modal-header">
+        <div class="resume-header-left">
+          <h3>Executive Resume &bull; Ayaan Singh Parihar</h3>
+          <span class="resume-verified-tag">✓ ISC Science &bull; AI Systems &bull; Cybersecurity</span>
+        </div>
+        <div class="resume-modal-actions">
+          <button id="resume-print-btn" class="cyber-btn cyber-btn-primary btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button id="resume-modal-close" class="modal-close-btn" aria-label="Close Resume">&times;</button>
+        </div>
+      </div>
+      <div class="resume-modal-body" id="resume-printable-area">
+        <!-- High-fidelity printable resume markup -->
+        <div class="clean-resume-document">
+          <header class="cr-header">
+            <div class="cr-header-content">
+              <h1 class="cr-name">Ayaan Singh Parihar</h1>
+              <div class="cr-title">Aspiring Cybersecurity Specialist | AI &amp; Automation Systems | Full-Stack Web Developer</div>
+              <div class="cr-contact-row">
+                <span>📧 anshparihar345@gmail.com</span>
+                <span>📱 +91 9236447300</span>
+                <span>📍 Jhansi, Uttar Pradesh, India 284003</span>
+                <span>🔗 github.com/Void-Ayaan</span>
+                <span>🔗 linkedin.com/in/ansh-parihar-23b681387</span>
+              </div>
+            </div>
+            <div class="cr-photo-wrapper">
+              <img src="assets/images/ayaan_cyber_portrait.jpg" alt="Ayaan Singh Parihar" class="cr-photo">
+            </div>
+          </header>
+
+          <section class="cr-section">
+            <h2 class="cr-sec-title">PROFESSIONAL SUMMARY</h2>
+            <p>
+              Focused and fast-learning Class 12 Science student (ISC) and developer with strong practical experience in local-first AI engineering, 
+              cybersecurity fundamentals, algorithmic trading bots, and client website deployment. Skilled at simplifying complex technical concepts into 
+              structured architectures and crisp documentation. Proven ability to research, build, and document production-grade systems — from 
+              offline LLM desktop assistants with SAPI voice to backtested trading scalpers and commercial business platforms.
+            </p>
+          </section>
+
+          <section class="cr-section">
+            <h2 class="cr-sec-title">KEY TECHNICAL SKILLS</h2>
+            <div class="cr-skills-grid">
+              <div><strong>AI &amp; Automation:</strong> Local LLMs (Qwen3-1.7B GGUF via llamafile), Tool-calling pipelines, Structured JSON Brain, Telegram Bot automation, Windows SAPI.</div>
+              <div><strong>Cybersecurity &amp; Tech:</strong> Ethical Hacking fundamentals, Incident Response concepts, Network security basics, Bash scripting, Linux environments.</div>
+              <div><strong>Programming &amp; Tools:</strong> Java (OOP, DSA, Searching, Sorting), Python scripting, Playwright browser automation, REST APIs, Git/GitHub, Docker basics.</div>
+              <div><strong>Frontend &amp; UI/UX:</strong> HTML5, CSS3, JavaScript (ES6+), React, Vite, Tailwind CSS, shadcn/ui, responsive design, visual hierarchy.</div>
+              <div><strong>Finance &amp; Trading:</strong> Algorithmic scalping strategies (EMA, RSI, MACD, VWAP, ADX, fractals), automated execution logging.</div>
+              <div><strong>Media &amp; Automation:</strong> Short-form video sequencing, clip transitions, beat-synchronized cuts, Canva, Playwright unattended publishing.</div>
+            </div>
+          </section>
+
+          <section class="cr-section">
+            <h2 class="cr-sec-title">FEATURED SYSTEMS &amp; PROJECTS</h2>
+            
+            <div class="cr-project">
+              <div class="cr-proj-header">
+                <span class="cr-proj-name">Buddy AI System — Local Desktop Assistant</span>
+                <span class="cr-proj-tag">Independent Project &bull; Active</span>
+              </div>
+              <ul>
+                <li>Developed a local-first Windows desktop assistant combining quantized Qwen3-1.7B in GGUF format through a local llamafile server without hosted model API costs.</li>
+                <li>Built a request pipeline separating cached greetings, deterministic actions, factual knowledge queries, and model-routed tool calls.</li>
+                <li>Created a registry of ~24 utilities, local JSON memory stores for notes and proactive-speech states, and a local web HUD displaying CPU, RAM, and battery telemetry.</li>
+                <li>Achieved 10/10 correct results on a fixed tool-calling benchmark; added Windows SAPI speech output and configurable proactive speech scheduler.</li>
+              </ul>
+            </div>
+
+            <div class="cr-project">
+              <div class="cr-proj-header">
+                <span class="cr-proj-name">Tradex — Algorithmic Trading Bot</span>
+                <span class="cr-proj-tag">Quant Strategy &bull; Testing</span>
+              </div>
+              <ul>
+                <li>Designed an automated scalping strategy (EMA, ADX, VWAP, RSI, fractals) with automated order handling, execution logging, and risk controls.</li>
+                <li>Created research-based market explainers and performance testing reports while studying live market mechanisms.</li>
+              </ul>
+            </div>
+
+            <div class="cr-project">
+              <div class="cr-proj-header">
+                <span class="cr-proj-name">Published Commercial Websites (AM Nation, Shooins, Saimahima Stays)</span>
+                <span class="cr-proj-tag">Client Deployments</span>
+              </div>
+              <ul>
+                <li><strong>AM Nation:</strong> Built and published commercial business website focused on layout and visual presentation (amnation.netlify.app).</li>
+                <li><strong>Shooins:</strong> Developed B2B wholesale hair-accessories supplier platform with product catalog and inquiry funnels (shooins.netlify.app).</li>
+                <li><strong>Saimahima Stays:</strong> Designed and deployed hospitality web experience on custom domain (saimahimastays.site).</li>
+              </ul>
+            </div>
+
+            <div class="cr-project">
+              <div class="cr-proj-header">
+                <span class="cr-proj-name">Techmonade &amp; Social Media Automation</span>
+                <span class="cr-proj-tag">Media Brand &bull; instagram.com/techmonade</span>
+              </div>
+              <ul>
+                <li>Created technology media brand focused on desk setups and peripherals; designed Python/Playwright automation pipeline for video sequencing and publishing.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="cr-section">
+            <h2 class="cr-sec-title">EDUCATION &amp; ACADEMIC HONORS</h2>
+            <div class="cr-edu-item">
+              <div class="cr-edu-header">
+                <strong>Cathedral College, Jhansi</strong> — Indian School Certificate (ISC) Class XII (Science)
+                <span>2026</span>
+              </div>
+              <div>Subjects: Physics, Chemistry, Mathematics, Computer Science, Arts, English.</div>
+            </div>
+            <div class="cr-edu-item">
+              <div class="cr-edu-header">
+                <strong>Cathedral College, Jhansi</strong> — Class X Computer Science (Java OOP &amp; DSA)
+                <span>Score: 92%</span>
+              </div>
+              <div>Reported school-highest Computer Science score for the graduating year.</div>
+            </div>
+          </section>
+
+          <section class="cr-section">
+            <h2 class="cr-sec-title">AUTHENTICATED CERTIFICATIONS</h2>
+            <ul class="cr-cert-list">
+              <li><strong>AI Tools and ChatGPT Workshop</strong> — be10x, Issued April 13th, 2025 (Presentations, Data Analysis, AI-assisted code &amp; debugging).</li>
+              <li><strong>Create Your First Python Program From UST</strong> — Coursera Project Network, Nov 8, 2025 (Verification ID: PGV6TNVKMS4R).</li>
+              <li><strong>Generative AI Mastermind</strong> — Outskill, Certificate of Completion.</li>
+              <li><strong>How To Become A Top Full Stack Developer In 2026</strong> — WsCube Tech, Certificate of Participation, Jan 2026.</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
