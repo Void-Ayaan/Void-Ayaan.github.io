@@ -515,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li><strong>Phone / WhatsApp:</strong> <a href="tel:+919236447300" class="link-cyan">+91 9236447300</a></li>
         <li><strong>Location:</strong> Jhansi, Uttar Pradesh, India 284003</li>
         <li><strong>GitHub:</strong> <a href="https://github.com/Void-Ayaan" target="_blank" class="link-cyan">github.com/Void-Ayaan</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ansh-parihar-23b681387" target="_blank" class="link-cyan">linkedin.com/in/ansh-parihar-23b681387</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ayaan-singh-parihar-23b681387" target="_blank" class="link-cyan">linkedin.com/in/ayaan-singh-parihar-23b681387</a></li>
         <li><strong>Instagram Brand:</strong> <a href="https://www.instagram.com/techmonade/" target="_blank" class="link-cyan">@techmonade</a></li>
       </ul>`
     }
@@ -748,7 +748,7 @@ Communication Coordinates:
 - Email:     anshparihar345@gmail.com
 - Phone:     +91 9236447300
 - GitHub:    https://github.com/Void-Ayaan
-- LinkedIn:  https://www.linkedin.com/in/ansh-parihar-23b681387
+- LinkedIn:  https://www.linkedin.com/in/ayaan-singh-parihar-23b681387
 - Instagram: https://www.instagram.com/techmonade/`;
         break;
 
